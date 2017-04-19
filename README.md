@@ -1,9 +1,14 @@
-# api documentation for  [striptags (v3.0.1)](https://github.com/ericnorris/striptags)  [![npm package](https://img.shields.io/npm/v/npmdoc-striptags.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-striptags) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-striptags.svg)](https://travis-ci.org/npmdoc/node-npmdoc-striptags)
+# npmdoc-striptags
+
+#### api documentation for  [striptags (v3.0.1)](https://github.com/ericnorris/striptags)  [![npm package](https://img.shields.io/npm/v/npmdoc-striptags.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-striptags) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-striptags.svg)](https://travis-ci.org/npmdoc/node-npmdoc-striptags)
+
 #### PHP strip_tags in Node.js
 
-[![NPM](https://nodei.co/npm/striptags.png?downloads=true)](https://www.npmjs.com/package/striptags)
+[![NPM](https://nodei.co/npm/striptags.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/striptags)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-striptags/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-striptags_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-striptags/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-striptags/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-striptags/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-striptags/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-striptags/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-striptags/build/screenCapture.npmPackageListing.svg)
 
@@ -47,13 +52,11 @@
     "main": "src/striptags.js",
     "maintainers": [
         {
-            "name": "ericnorris",
-            "email": "erictnorris@gmail.com"
+            "name": "ericnorris"
         }
     ],
     "name": "striptags",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/ericnorris/striptags.git"
@@ -64,53 +67,6 @@
     },
     "version": "3.0.1"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module striptags](#apidoc.module.striptags)
-1.  [function <span class="apidocSignatureSpan">striptags.</span>init_streaming_mode (allowable_tags, tag_replacement)](#apidoc.element.striptags.init_streaming_mode)
-
-
-
-# <a name="apidoc.module.striptags"></a>[module striptags](#apidoc.module.striptags)
-
-#### <a name="apidoc.element.striptags.init_streaming_mode"></a>[function <span class="apidocSignatureSpan">striptags.</span>init_streaming_mode (allowable_tags, tag_replacement)](#apidoc.element.striptags.init_streaming_mode)
-- description and source-code
-```javascript
-function init_striptags_stream(allowable_tags, tag_replacement) {
-    allowable_tags  = allowable_tags || [];
-    tag_replacement = tag_replacement || '';
-
-    let context = init_context(allowable_tags, tag_replacement);
-
-    return function striptags_stream(html) {
-        return striptags_internal(html || '', context);
-    };
-}
-```
-- example usage
-```shell
-...
- sit amet
-'''
-
-## Streaming Mode
-'striptags' can also operate in streaming mode. Simply call 'init_streaming_mode' to get back a function that accepts HTML and outputs
- stripped HTML. State is saved between calls so that partial HTML can be safely passed in.
-
-'''javascript
-let stream_function = striptags.init_streaming_mode(
-    allowed_tags,
-    tag_replacement
-);
-
-let partial_text = stream_function(partial_html);
-let more_text    = stream_function(more_html);
-'''
-...
 ```
 
 

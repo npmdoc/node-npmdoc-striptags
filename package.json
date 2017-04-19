@@ -1,7 +1,7 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
     "buildNpmdoc": "striptags",
-    "description": "api documentation for [striptags (v3.0.1)](https://github.com/ericnorris/striptags) [![npm package](https://img.shields.io/npm/v/npmdoc-striptags.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-striptags) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-striptags.svg)](https://travis-ci.org/npmdoc/node-npmdoc-striptags)",
+    "description": "#### api documentation for  [striptags (v3.0.1)](https://github.com/ericnorris/striptags)  [![npm package](https://img.shields.io/npm/v/npmdoc-striptags.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-striptags) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-striptags.svg)](https://travis-ci.org/npmdoc/node-npmdoc-striptags)",
     "devDependencies": {
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "striptags": "*",
@@ -36,5 +36,5 @@
         "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
         "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
-    "version": "0.0.1"
+    "version": "0.0.2"
 }

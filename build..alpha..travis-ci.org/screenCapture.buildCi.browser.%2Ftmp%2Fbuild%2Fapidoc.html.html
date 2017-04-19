@@ -56,6 +56,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.striptags.striptags">
+            function <span class="apidocSignatureSpan"></span>striptags
+            <span class="apidocSignatureSpan">(html, allowable_tags, tag_replacement)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.striptags.init_streaming_mode">
             function <span class="apidocSignatureSpan">striptags.</span>init_streaming_mode
             <span class="apidocSignatureSpan">(allowable_tags, tag_replacement)</span>
@@ -69,6 +78,27 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.striptags" id="apidoc.module.striptags">module striptags</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.striptags.striptags" id="apidoc.element.striptags.striptags">
+        function <span class="apidocSignatureSpan"></span>striptags
+        <span class="apidocSignatureSpan">(html, allowable_tags, tag_replacement)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function striptags(html, allowable_tags, tag_replacement) {
+    html            = html || '';
+    allowable_tags  = allowable_tags || [];
+    tag_replacement = tag_replacement || '';
+
+    let context = init_context(allowable_tags, tag_replacement);
+
+    return striptags_internal(html, context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
